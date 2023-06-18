@@ -20,6 +20,18 @@ setInterval(function() {
     }
 }, 1000);
 nextBtn.addEventListener('click', function() {
+  // Включение анимации нажатия
+  this.style.transform = "scale(0.9)";
+  // Изменение цвета фона
+  this.style.backgroundColor = "#4c4d51";
+
+  // Задержка для отображения анимации нажатия и изменения цвета
+  setTimeout(() => {
+    // Возврат к исходному размеру и цвету после анимации нажатия
+    this.style.transform = "scale(1)";
+    this.style.backgroundColor = "#2c2d31";
+  }, 200); // Измените задержку, если требуется другая продолжительность анимации
+
     v = 0;
     n++;
     card1.classList.add('disactive');
@@ -62,6 +74,18 @@ nextBtn.addEventListener('click', function() {
     }
 });
 backBtn.addEventListener('click', function() {
+  // Включение анимации нажатия
+  this.style.transform = "scale(0.9)";
+  // Изменение цвета фона
+  this.style.backgroundColor = "#4c4d51";
+
+  // Задержка для отображения анимации нажатия и изменения цвета
+  setTimeout(() => {
+    // Возврат к исходному размеру и цвету после анимации нажатия
+    this.style.transform = "scale(1)";
+    this.style.backgroundColor = "#2c2d31";
+  }, 200); // Измените задержку, если требуется другая продолжительность анимации
+
     if(n === 1) {
         card1.classList.remove('disactive');
         lcard1.classList.add('disactive');
@@ -271,4 +295,24 @@ btn2.addEventListener('click', function() {
 });
 btn3.addEventListener('click', function() {
     window.location.href = "https://github.com/CODEX74";
+});
+
+
+
+// Добавление обработчика события нажатия кнопки
+nextBtn.addEventListener("mousedown", function() {
+  this.style.transform = "scale(0.9)";
+});
+
+backBtn.addEventListener("mousedown", function() {
+  this.style.transform = "scale(0.9)";
+});
+
+// Добавление обработчика события отпускания кнопки
+nextBtn.addEventListener("mouseup", function() {
+  this.style.transform = "scale(1)";
+});
+
+backBtn.addEventListener("mouseup", function() {
+  this.style.transform = "scale(1)";
 });
